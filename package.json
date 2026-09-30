@@ -1,0 +1,15 @@
+{
+  "name": "math-lesson-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Prototype of an interactive kids' math lesson: lesson picker, hands-on activity, in-lesson questions, end quiz. Lessons are data files.",
+  "scripts": {
+    "test": "node scripts/validate-lessons.mjs",
+    "start": "node init && npx --yes serve . -l 3000",
+    "deploy": "npx --yes vercel --prod"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

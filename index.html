@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="robots" content="noindex, nofollow">
+<title>Math lesson prototype - Make 10 to add</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="page-head">
+  <h1>Math lesson prototype</h1>
+  <p>One working lesson for your e-learning post, with my design notes beside it. From Josinaldo.</p>
+</header>
+
+<main class="board">
+  <div class="tablet" aria-label="Lesson, as a child sees it on a tablet">
+    <div class="screen" id="screen">
+      <div class="bar">
+        <button class="icon" id="home" aria-label="Back to lessons">&#8962;</button>
+        <div class="dots" id="dots" aria-hidden="true"></div>
+        <button class="icon" id="sound" aria-label="Sound on" aria-pressed="true">&#128266;</button>
+      </div>
+      <div class="stage" id="stage"></div>
+    </div>
+  </div>
+
+  <aside class="notes" aria-live="polite">
+    <div class="notes-head"><span>Design note</span><b id="note-title"></b></div>
+    <p id="note-body"></p>
+    <p class="note-foot">This panel changes as you play. It's what I'd write on a storyboard for your review.</p>
+  </aside>
+</main>
+
+<article class="writeup">
+  <h2>How it's put together</h2>
+  <p>The whole lesson is one data file, <a href="/lessons/make-ten.json">make-ten.json</a>. The player reads it and builds the screens, so a new lesson means writing a new file, not new code. A small checker, <a href="/scripts/validate-lessons.mjs">validate-lessons.mjs</a>, runs before anything ships. It catches things like an answer that isn't one of the choices, or "8 + 6" marked as 13. That kind of mistake is easy to make across hundreds of questions, and a child will find it before you do.</p>
+
+  <h2>Storyline, or built for the web?</h2>
+  <p>Your post lists Storyline and Rise, and they're a good fit if the program lives inside a school's learning platform. They export to the standard formats those platforms expect, and a lot of e-learning is built that way.</p>
+  <p>For a children's product that families use on tablets, and that grows into many lessons, I'd lean toward building it for the web like this prototype. It runs smoothly on tablets, touch and drag behave the way kids expect, and it can later become an app without starting over. It can still be packaged for a school platform if needed. That's the decision I'd want to make with you first.</p>
+
+  <h2>What I'd ask you</h2>
+  <ul>
+    <li><b>What ages?</b> I assumed 6-7. Younger means more audio and fewer words on screen; older means we can lean on reading.</li>
+    <li><b>Where will children use it?</b> At home on a parent's tablet, or in class through a school platform?</li>
+    <li><b>Which curriculum?</b> Knowing the country and grade standard tells me which lessons come next and what words to use.</li>
+    <li><b>Voice.</b> A recorded narrator or a high-quality AI voice? The browser voice here is only a placeholder.</li>
+    <li><b>Accounts and data.</b> If children sign in or progress is saved, there are rules for children's data (COPPA in the US, for example). Easier to plan now than to fix later.</li>
+  </ul>
+  <p class="foot">Built with a font called Andika, designed for early readers. It has the single-story "a" and "g" children learn to write.</p>
+</article>
+<script src="/app.js" type="module"></script>
+</body>
+</html>

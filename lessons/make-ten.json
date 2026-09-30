@@ -1,0 +1,140 @@
+{
+  "id": "make-ten",
+  "title": "Make 10 to add",
+  "ages": "6-7",
+  "objective": "Add two one-digit numbers past 10 by making a 10 first.",
+  "steps": [
+    {
+      "type": "say",
+      "id": "intro",
+      "text": "Let's add 8 and 5. Here's a trick: make a ten first!",
+      "button": "Let's go"
+    },
+    {
+      "type": "move",
+      "id": "concrete",
+      "a": 8,
+      "b": 5,
+      "text": "Fill the top frame. Tap or drag the blue counters up until it has 10.",
+      "full": "The top frame is full. It has 10!",
+      "question": {
+        "text": "How many blue counters are left at the bottom?",
+        "choices": [
+          2,
+          3,
+          4
+        ],
+        "answer": 3,
+        "hint": "Count the blue counters still in the bottom frame.",
+        "explain": "There are 3 left. So 8 + 5 is the same as 10 + 3. That's 13!"
+      }
+    },
+    {
+      "type": "picture",
+      "id": "pictorial",
+      "a": 9,
+      "b": 4,
+      "questions": [
+        {
+          "text": "How many should move up to fill the top frame?",
+          "choices": [
+            1,
+            2,
+            3
+          ],
+          "answer": 1,
+          "hint": "The top frame has 9. How many more make 10?",
+          "explain": "Just 1. 9 and 1 make 10."
+        },
+        {
+          "text": "Now 9 + 4 is the same as 10 plus...",
+          "choices": [
+            2,
+            3,
+            4
+          ],
+          "answer": 3,
+          "hint": "After 1 moves up, count what's left at the bottom.",
+          "explain": "4 take away 1 leaves 3. So 9 + 4 = 10 + 3 = 13."
+        }
+      ]
+    },
+    {
+      "type": "bond",
+      "id": "abstract",
+      "a": 7,
+      "b": 6,
+      "split": [
+        3,
+        3
+      ],
+      "text": "7 needs 3 more to make 10. So we split 6 into 3 and 3.",
+      "question": {
+        "text": "What is 7 + 6?",
+        "answer": 13,
+        "hint": "7 and 3 make 10. Then add the other 3.",
+        "explain": "7 + 3 = 10, and 10 + 3 = 13."
+      }
+    },
+    {
+      "type": "quiz",
+      "id": "quiz",
+      "questions": [
+        {
+          "kind": "input",
+          "text": "9 + 3",
+          "answer": 12,
+          "hint": "9 needs 1 more to make 10. Take 1 from the 3.",
+          "explain": "9 + 1 = 10, then 10 + 2 = 12.",
+          "label": "9 + 3"
+        },
+        {
+          "kind": "choice",
+          "text": "Which number makes 10 with 6?",
+          "choices": [
+            3,
+            4,
+            5
+          ],
+          "answer": 4,
+          "hint": "Count up from 6 to 10.",
+          "explain": "6 + 4 = 10.",
+          "label": "6 + 4 = 10"
+        },
+        {
+          "kind": "input",
+          "text": "8 + 6",
+          "answer": 14,
+          "hint": "8 needs 2 to make 10. Take 2 from the 6.",
+          "explain": "8 + 2 = 10, then 10 + 4 = 14.",
+          "label": "8 + 6"
+        },
+        {
+          "kind": "choice",
+          "text": "8 + 4 is the same as 10 plus...",
+          "choices": [
+            1,
+            2,
+            3
+          ],
+          "answer": 2,
+          "hint": "8 needs 2 to make 10. What's left of the 4?",
+          "explain": "4 take away 2 is 2. So 8 + 4 = 10 + 2.",
+          "label": "8 + 4"
+        },
+        {
+          "kind": "input",
+          "text": "7 + 5",
+          "answer": 12,
+          "hint": "7 needs 3 to make 10. Take 3 from the 5.",
+          "explain": "7 + 3 = 10, then 10 + 2 = 12.",
+          "label": "7 + 5"
+        }
+      ]
+    },
+    {
+      "type": "results",
+      "id": "results"
+    }
+  ]
+}

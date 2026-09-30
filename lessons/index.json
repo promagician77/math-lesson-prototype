@@ -1,0 +1,8 @@
+{
+  "subject": "Math",
+  "lessons": [
+    { "id": "make-ten", "title": "Make 10 to add", "blurb": "8 + 5 and friends", "file": "make-ten.json", "playable": true },
+    { "id": "back-to-ten", "title": "Take away through 10", "blurb": "13 - 5 and friends", "playable": false },
+    { "id": "tens-and-ones", "title": "Tens and ones", "blurb": "What 34 really means", "playable": false }
+  ]
+}
